@@ -1,0 +1,2 @@
+# nemesis
+My mind palace
