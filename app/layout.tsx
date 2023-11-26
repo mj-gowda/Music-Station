@@ -12,7 +12,7 @@ const font = Figtree({ subsets: ["latin"] });
 export const revalidate = 0; // prevent caching
 
 export const metadata = {
-  title: "Music-Mingle",
+  title: "Music-Station",
   description: "A music streaming platform",
 };
 
@@ -27,9 +27,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ToasterProvider />
-        <Sidebar>{children}</Sidebar>
         <SupabaseProvider>
-          <Sidebar>{children}</Sidebar>
           <UserProvider>
             <ModalProvider />
             <Sidebar songs={userSongs}>{children}</Sidebar>
