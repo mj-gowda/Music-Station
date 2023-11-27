@@ -10,6 +10,8 @@ import usePlayer from "@/hooks/usePlayer";
 import { Song } from "@/types/types";
 import LikeButton from "../LinkButton";
 import MediaItem from "../MediaItem";
+import Slider from "./Slider";
+
 
 interface PlayerContentProps {
     song: Song;
@@ -195,6 +197,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
 						"
                         size={24}
                     />
+                    <Slider value={volume} onChange={(value) => setVolume(value)} />
                 </div>
             </div>
         </div>
