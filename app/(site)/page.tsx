@@ -9,16 +9,7 @@ export const revalidate = 0; // page will not be cached
 export default async function Home() {
   const songs = await getSongs();
   return (
-    <div
-      className="
-        bg-neutral-900 
-        md:rounded-lg 
-        h-full 
-        w-full 
-        overflow-hidden 
-        overflow-y-auto
-      "
-    >
+    <>
       <Header>
         {" "}
         <div className="mb-2">
@@ -56,6 +47,6 @@ export default async function Home() {
         </div>
         <PageContent songs={songs} />
       </div>
-    </div>
+    </>
   );
 }

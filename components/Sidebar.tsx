@@ -11,7 +11,6 @@ import { Song } from "@/types/types";
 import usePlayer from "@/hooks/usePlayer";
 import { twMerge } from "tailwind-merge";
 
-
 interface SidebarProps {
   children: React.ReactNode;
   songs: Song[];
@@ -40,16 +39,15 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
   );
 
   return (
-    <div className="flex h-full">
-      <div
-        className={twMerge(
-          `
+    <div
+      className={twMerge(
+        `
         flex 
         h-full
         `,
-          player.activeId && "h-[calc(100%-80px)]"
-        )}
-      ></div>
+        player.activeId && "h-[calc(100%-80px)]"
+      )}
+    >
       <div
         className="hidden 
           md:flex 
@@ -71,8 +69,19 @@ const Sidebar: React.FC<SidebarProps> = ({ children, songs }) => {
           <Library songs={songs} />
         </Box>
       </div>
-      <main>
-        <main className="h-full flex-1 overflow-y-auto md:py-2 md:pr-2">{children}</main>
+      <main className="h-full flex-1 overflow-y-auto md:py-2 md:pr-2">
+        <div
+          className="
+        bg-neutral-900 
+        md:rounded-lg 
+        h-full 
+        w-full 
+        overflow-hidden 
+        overflow-y-auto
+      "
+        >
+          {children}
+        </div>
       </main>
     </div>
   );
