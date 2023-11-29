@@ -28,4 +28,4 @@ There are some key relationships in this database structure:
 
 2. **Users and Liked Songs**: There is a many-to-many relationship between users and liked songs. A user can like many songs, and a song can be liked by many users. This relationship is managed through the `liked_songs` table.
 
-This database structure ensures that user data is kept securely, while also making it possible to track the songs they upload and like, providing a seamless music experience on our platform, Drumroll Music.
+This database structure ensures that user data is kept securely, while also making it possible to track the songs they upload and like, providing a seamless music experience on our platform, Music-Station.
