@@ -3,15 +3,21 @@ import { twMerge } from "tailwind-merge";
 
 // Reuse native props for `input`
 export interface InputProps
-    extends React.InputHTMLAttributes<HTMLInputElement> { }
+	extends React.InputHTMLAttributes<HTMLInputElement> { }
+
+/**
+* Input component that is used to display an input.
+* Uses the props of the native input.
+*/
+
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-    ({ className, type, disabled, ...props }, ref) => {
-        return (
-            <input
-                type={type}
-                className={twMerge(
-                    `
+	({ className, type, disabled, ...props }, ref) => {
+		return (
+			<input
+				type={type}
+				className={twMerge(
+					`
 					flex 
 					w-full 
 					rounded-lg 
@@ -30,15 +36,15 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 					disabled:opacity-50
 					focus:outline-none
 					`,
-                    disabled && "opacity-75",
-                    className
-                )}
-                disabled={disabled}
-                ref={ref}
-                {...props}
-            />
-        );
-    }
+					disabled && "opacity-75",
+					className
+				)}
+				disabled={disabled}
+				ref={ref}
+				{...props}
+			/>
+		);
+	}
 );
 
 Input.displayName = "Input";

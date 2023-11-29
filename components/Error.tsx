@@ -2,6 +2,11 @@
 
 import PageMessage from "./PageMessage";
 
+/**
+ * Error message component to be displayed on error pages.
+ * @returns (React.ReactNode): the error message
+ */
+
 const ErrorMessage = () => {
     return (
         <>
