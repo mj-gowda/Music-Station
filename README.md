@@ -1,3 +1,4 @@
+<img width="1000" alt="cover" src="https://github.com/mj-gowda/assets/blob/main/music-station/wiki/home.png">
 Welcome to Music-Station, a platform dedicated to delivering a streamlined and personal music streaming experience. With Music-Station, you can easily sign-in using various methods, upload your favorite songs, like tracks, and listen using our built-in player. Search for songs anytime, anywhere. Simple, intuitive, and focused on what truly matters - your music. Welcome to Music-Station, your personal stage for musical enjoyment.
 
 # **Requirements**
